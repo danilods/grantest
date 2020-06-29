@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class OrgaosTableSeeder extends Seeder
 {
@@ -12,12 +13,12 @@ class OrgaosTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('orgaos')->delete();
-        
-        \DB::table('orgaos')->insert(array (
-            0 => 
+
+        DB::table('orgaos')->delete();
+
+        DB::table('orgaos')->insert(array (
+            0 =>
             array (
                 'id' => 1,
                 'name' => 'Ministério Público do Distrito Federal',
@@ -26,7 +27,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 17:52:42',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'name' => 'Tribunal de Justiça do Pará',
@@ -35,7 +36,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 17:52:27',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'name' => 'Tribunal de Justiça do Tocantins',
@@ -44,7 +45,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 00:22:04',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'name' => 'Polícia Federal',
@@ -53,7 +54,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:23:25',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'name' => 'Polícia Rodoviária Federal',
@@ -62,7 +63,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:23:37',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'name' => 'Senado Federal',
@@ -71,7 +72,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:31:33',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'name' => 'Ministério Público da União',
@@ -80,7 +81,7 @@ class OrgaosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:32:20',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'name' => 'Departamento Penitenciário Federal',
@@ -90,7 +91,7 @@ class OrgaosTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BancasTableSeeder extends Seeder
 {
@@ -12,12 +13,12 @@ class BancasTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('bancas')->delete();
-        
-        \DB::table('bancas')->insert(array (
-            0 => 
+
+        DB::table('bancas')->delete();
+
+        DB::table('bancas')->insert(array (
+            0 =>
             array (
                 'id' => 1,
                 'nome_banca' => 'Fundação Getúlio Vargas - FGV',
@@ -25,7 +26,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 18:59:01',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'nome_banca' => 'CESPE/CEBRASPE',
@@ -33,7 +34,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-25 14:42:04',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'nome_banca' => 'Instituto de Formação e Capacitação - IBFC',
@@ -41,7 +42,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 02:12:52',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'nome_banca' => 'VUNESP',
@@ -49,7 +50,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 02:17:22',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'nome_banca' => 'Instituto AOCP',
@@ -57,7 +58,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:01:18',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'nome_banca' => 'Instituto Quadrix',
@@ -65,7 +66,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:02:12',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'nome_banca' => 'Fundaçao Carlos Chagas - FCC',
@@ -73,7 +74,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:03:04',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'nome_banca' => 'Fundação Cesgranrio',
@@ -81,7 +82,7 @@ class BancasTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:04:14',
                 'deleted_at' => NULL,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'nome_banca' => 'Instituto Americano de Desenvolvimento - IADES',
@@ -90,7 +91,7 @@ class BancasTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }

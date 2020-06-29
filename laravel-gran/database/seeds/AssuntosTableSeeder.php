@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AssuntosTableSeeder extends Seeder
 {
@@ -12,12 +13,12 @@ class AssuntosTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('assuntos')->delete();
-        
-        \DB::table('assuntos')->insert(array (
-            0 => 
+
+        DB::table('assuntos')->delete();
+
+        DB::table('assuntos')->insert(array (
+            0 =>
             array (
                 'id' => 1,
                 'titulo_assunto' => 'Teoria da administração',
@@ -26,7 +27,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-25 14:57:54',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'titulo_assunto' => 'Teoria da Taylor',
@@ -35,7 +36,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-25 14:58:24',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'titulo_assunto' => 'Engenharia de Software',
@@ -44,7 +45,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 22:53:29',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'titulo_assunto' => 'Arquitetura MVC',
@@ -53,7 +54,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 22:53:45',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'titulo_assunto' => 'Arquitetura em camadas',
@@ -62,7 +63,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 23:13:05',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'titulo_assunto' => 'Modelo em Cascata',
@@ -71,7 +72,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 23:52:40',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'titulo_assunto' => 'Modelo Iterativo e Incremental',
@@ -80,7 +81,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-26 23:55:15',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'titulo_assunto' => 'Governança de TI',
@@ -89,7 +90,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:06:49',
                 'deleted_at' => NULL,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'titulo_assunto' => 'CMMI',
@@ -98,7 +99,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:07:08',
                 'deleted_at' => NULL,
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'titulo_assunto' => 'COBIT 5',
@@ -107,7 +108,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:07:56',
                 'deleted_at' => NULL,
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'titulo_assunto' => 'PMBOK 5',
@@ -116,7 +117,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:08:17',
                 'deleted_at' => NULL,
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'titulo_assunto' => 'ITIL V.3',
@@ -125,7 +126,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:08:25',
                 'deleted_at' => NULL,
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'titulo_assunto' => 'Balanced Scorecard',
@@ -134,7 +135,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:08:48',
                 'deleted_at' => NULL,
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'titulo_assunto' => 'MPS.BR',
@@ -143,7 +144,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:09:04',
                 'deleted_at' => NULL,
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'titulo_assunto' => 'PETI',
@@ -152,7 +153,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:09:16',
                 'deleted_at' => NULL,
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'titulo_assunto' => 'ISO 38500',
@@ -161,7 +162,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:09:26',
                 'deleted_at' => NULL,
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'titulo_assunto' => 'UML',
@@ -170,7 +171,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:10:11',
                 'deleted_at' => NULL,
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'titulo_assunto' => 'Eng. de Requisitos',
@@ -179,7 +180,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:10:19',
                 'deleted_at' => NULL,
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'titulo_assunto' => 'XP',
@@ -188,7 +189,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:10:27',
                 'deleted_at' => NULL,
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'titulo_assunto' => 'SCRUM',
@@ -197,7 +198,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:10:33',
                 'deleted_at' => NULL,
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'titulo_assunto' => 'Prototipação',
@@ -206,7 +207,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:10:54',
                 'deleted_at' => NULL,
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'titulo_assunto' => 'Métricas de Software',
@@ -215,7 +216,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:11:05',
                 'deleted_at' => NULL,
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'titulo_assunto' => 'Orientação a Objetos',
@@ -224,7 +225,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:11:19',
                 'deleted_at' => NULL,
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'titulo_assunto' => 'RUP',
@@ -233,7 +234,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:11:40',
                 'deleted_at' => NULL,
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'titulo_assunto' => 'Arquitetura de Computadores',
@@ -242,7 +243,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:12:19',
                 'deleted_at' => NULL,
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'titulo_assunto' => 'Arquitetura RISC, CISC',
@@ -251,7 +252,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:00',
                 'deleted_at' => NULL,
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'titulo_assunto' => 'Barramento',
@@ -260,7 +261,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:12',
                 'deleted_at' => NULL,
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'titulo_assunto' => 'Memória',
@@ -269,7 +270,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:21',
                 'deleted_at' => NULL,
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'titulo_assunto' => 'Processadores',
@@ -278,7 +279,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:29',
                 'deleted_at' => NULL,
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'titulo_assunto' => 'Placa-mãe',
@@ -287,7 +288,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:41',
                 'deleted_at' => NULL,
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'titulo_assunto' => 'Sistemas de Arquivos',
@@ -296,7 +297,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:13:53',
                 'deleted_at' => NULL,
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'titulo_assunto' => 'Sistemas distribuídos',
@@ -305,7 +306,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:14:03',
                 'deleted_at' => NULL,
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'titulo_assunto' => 'Banco de dados',
@@ -314,7 +315,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:14:28',
                 'deleted_at' => NULL,
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'titulo_assunto' => 'BI',
@@ -323,7 +324,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:14:50',
                 'deleted_at' => NULL,
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'titulo_assunto' => 'Banco de dados distribuídos',
@@ -332,7 +333,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:14:59',
                 'deleted_at' => NULL,
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'titulo_assunto' => 'Data Mining',
@@ -341,7 +342,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:12',
                 'deleted_at' => NULL,
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'titulo_assunto' => 'Data Warehouse',
@@ -350,7 +351,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:20',
                 'deleted_at' => NULL,
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'titulo_assunto' => 'Data Mart',
@@ -359,7 +360,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:25',
                 'deleted_at' => NULL,
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'titulo_assunto' => 'DER diagrama de entidade e relacionamento',
@@ -368,7 +369,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:40',
                 'deleted_at' => NULL,
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'titulo_assunto' => 'ETL',
@@ -377,7 +378,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:52',
                 'deleted_at' => NULL,
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'titulo_assunto' => 'Formas Normais',
@@ -386,7 +387,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:15:58',
                 'deleted_at' => NULL,
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 42,
                 'titulo_assunto' => 'Modelo Relacional',
@@ -395,7 +396,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:16:11',
                 'deleted_at' => NULL,
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 43,
                 'titulo_assunto' => 'PostgreSQL',
@@ -404,7 +405,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:16:39',
                 'deleted_at' => NULL,
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 44,
                 'titulo_assunto' => 'MySQL',
@@ -413,7 +414,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:16:43',
                 'deleted_at' => NULL,
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 45,
                 'titulo_assunto' => 'Oracle',
@@ -422,7 +423,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:16:47',
                 'deleted_at' => NULL,
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 46,
                 'titulo_assunto' => 'SGBD',
@@ -431,7 +432,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:16:55',
                 'deleted_at' => NULL,
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 47,
                 'titulo_assunto' => 'NoSql',
@@ -440,7 +441,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:17:01',
                 'deleted_at' => NULL,
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 48,
                 'titulo_assunto' => 'MongoDB',
@@ -449,7 +450,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:17:05',
                 'deleted_at' => NULL,
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 49,
                 'titulo_assunto' => 'Teoria Neoclássica',
@@ -458,7 +459,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:18:23',
                 'deleted_at' => NULL,
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 50,
                 'titulo_assunto' => 'Teoria da contingência',
@@ -467,7 +468,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:18:28',
                 'deleted_at' => NULL,
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 51,
                 'titulo_assunto' => 'Teoria de Sistemas',
@@ -476,7 +477,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:18:35',
                 'deleted_at' => NULL,
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 52,
                 'titulo_assunto' => 'Estratégia Organizacional',
@@ -485,7 +486,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:18:52',
                 'deleted_at' => NULL,
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 53,
                 'titulo_assunto' => 'Análise SWOT',
@@ -494,7 +495,7 @@ class AssuntosTableSeeder extends Seeder
                 'updated_at' => '2020-06-28 22:19:06',
                 'deleted_at' => NULL,
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 54,
                 'titulo_assunto' => 'Matriz GUT',
@@ -504,7 +505,7 @@ class AssuntosTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }
