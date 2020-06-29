@@ -44,7 +44,7 @@
 ## Disposições:
 
  - Home
-  -  Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
+  -  :pencil: Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
   -  Órgãos: área para o cadastro, edição e exclusão de órgão;
   -  Bancas: área para a gestão de bancas;
   -  área para o gerenciamento de assuntos/disciplinas;
