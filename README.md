@@ -22,7 +22,7 @@
     <img alt="Repository issues" src="https://img.shields.io/github/issues/danilods/grantest?color=%235636D3">
   </a>
   
-  <img alt="GitHub" src="https://img.shields.io/github/license/danilods/grantest?color=%235636D3">
+  <img alt="GitHub" src="https://img.shields.io/github/danilods/grantest/LICENSE?color=%235636D3">
 </p>
 
 <p align="center">
