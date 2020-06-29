@@ -50,7 +50,7 @@
   -  :blue_book: Assuntos área para o gerenciamento de assuntos/disciplinas;
   -     * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
   -     * Assuntos que não possuem filhos são considerados pais na estrutura hierárquica;
-  -  :target:  Questões: área para o gerenciamento de questões;
+  -  :bulb:  Questões: área para o gerenciamento de questões;
   -      * entidades relacionadas: bancas, orgaos e assuntos;
 
 ## 🚀 Tecnologias
