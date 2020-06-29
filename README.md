@@ -41,26 +41,22 @@
 
   GraNerD é uma aplicação desenvolvida para gerar um mapeamento de estudos direcionados a partir da escolha de determinada banca organizadora e o Órgão público. Além do mais, o módulo possui funcionalidades para gerenciar bancas, órgão, assunto, disciplinas e questões, de modo que o usuário possa manter sua uma base de dados com informações sobre certames públicos.
 
-Disposições:
+### Disposições:
 
-  Home
-    |
-    |
-    ## Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
-    |
-    ## Órgãos: área para o cadastro, edição e exclusão de órgão;
-    |
-    |
-    ## Bancas: área para a gestão de bancas;
-    |
-    |
-    ## Assuntos: área para o gerenciamento de assuntos/disciplinas;
-        * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
-        * Assuntos que não possuem filhos são considerados pais na estrutura hierárquica;
-    |
-    | 
-    ## Questões: área para o gerenciamento de questões;
-        * entidades relacionadas: bancas, orgaos e assuntos;
+ -- Home
+  --  |
+  --  ## Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
+  --  |
+  --  ## Órgãos: área para o cadastro, edição e exclusão de órgão;
+  --  |
+  --  ## Bancas: área para a gestão de bancas;
+  --  |
+  --  ## Assuntos: área para o gerenciamento de assuntos/disciplinas;
+  --      * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
+  --      * Assuntos que não possuem filhos são considerados pais na estrutura hierárquica;
+  --  | 
+  --  ## Questões: área para o gerenciamento de questões;
+  --      * entidades relacionadas: bancas, orgaos e assuntos;
 
 ## 🚀 Tecnologias
 
