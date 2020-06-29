@@ -17,10 +17,7 @@
   <a href="https://github.com/danilods/gobarber-admin/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/danilods/grantest?color=%235636D3">
   </a>
-  
-  <a href="https://github.com/danilods/gobarber-admin/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/license/danilods/grantest?color=%235636D3">
-  </a>
+ 
   
   <img alt="GitHub" src="https://img.shields.io/github/license/danilods/grantest?style=flat-squaret?color=%235636D3">
 </p>
@@ -126,7 +123,7 @@ $ cd vuegran
 $ yarn or npm install
 
 # Rode a aplicação
-$ yarn dev ou npm dev
+$ yarn dev ou npm run dev
 
 # acesse em http://localhost:8080
 ```
