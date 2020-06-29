@@ -35,7 +35,7 @@
 
 
 
-![Alt text](modelo-dados.jpg?raw=true "grantest")
+![Alt text](modelo-dados.png?raw=true "grantest")
 
 ## 💰 Sobre o projeto
 
