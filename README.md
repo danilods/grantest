@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="public/banner-web.png" title="granerd"></h1>
+<img src="banner-web.png" title="granerd"></h1>
 
 <h3 align="center">
   :barber: GranNERD - Programa dinâmico de estudos
@@ -35,7 +35,7 @@
 
 
 
-![Alt text](/public/overview.png?raw=true "grantest")
+![Alt text](overview.png?raw=true "grantest")
 
 ## 💰 Sobre o projeto
 
