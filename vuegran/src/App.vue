@@ -2,6 +2,9 @@
   <div id="app">
     <nav id="header-menu">
       <ul>
+         <li>
+          <a href="/"><span>Home</span></a>
+        </li>
         <li>
           <router-link to="/programa"><span>Programas</span></router-link>
         </li>
@@ -22,6 +25,7 @@
       </ul>
     </nav>
     <div id="content">
+
       <router-view></router-view>
     </div>
   </div>
@@ -41,17 +45,10 @@ export default {
 
 #header-menu {
   background-image: url("./assets/banner-web.png");
-  margin: auto;
+  width: 100%;
   height: 320px;
-}
-
-#header-menu .logo {
-  padding: 10px 16px;
-  height: 24px;
-  width: 24px;
-  float: left;
-  font-size: 24px;
-  transition: 0.3s;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 #header-menu ul {

@@ -101,7 +101,7 @@ export default {
         OrgaoService.save(this.orgao)
           .then(response => {
             this.orgao = {};
-            alert("Salvo com sucesso");
+            alert("Registro Salvo com sucesso");
             this.list();
             this.errors = [];
           })
@@ -112,7 +112,7 @@ export default {
         OrgaoService.update(this.orgao)
           .then(response => {
             this.orgao = {};
-            alert("atualizado com sucesso");
+            alert("Registro atualizado com sucesso");
             this.list();
             this.errors = [];
           })

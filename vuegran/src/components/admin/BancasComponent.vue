@@ -90,7 +90,7 @@ export default {
         Banca.save(this.banca)
           .then(response => {
             this.banca = {};
-            alert("Salvo com sucesso");
+            alert("Registro salvo com sucesso");
             this.list();
             this.errors = [];
           })
@@ -101,7 +101,7 @@ export default {
         Banca.update(this.banca)
           .then(response => {
             this.banca = {};
-            alert("atualizado com sucesso");
+            alert("Registro atualizado com sucesso");
             this.list();
             this.errors = [];
           })

@@ -123,7 +123,7 @@ export default {
         AssuntoService.save(this.assunto)
           .then(response => {
             this.assunto = {};
-            alert("Salvo com sucesso");
+            alert("Registro salvo com sucesso");
             this.list();
             this.errors = [];
           })
@@ -134,7 +134,7 @@ export default {
         AssuntoService.update(this.assunto)
           .then(response => {
             this.assunto = {};
-            alert("atualizado com sucesso");
+            alert("Registro atualizado com sucesso");
             this.list();
             this.errors = [];
           })

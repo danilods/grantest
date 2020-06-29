@@ -50,11 +50,19 @@ class QuestoesRepository extends BaseRepository
             ->join('assuntos', 'questoes.assunto_id', '=', 'assuntos.id')
                 ->select(DB::raw('count(*) as num_questoes, raiz_id as root')
                 , 'assuntos.titulo_assunto', 'assuntos.id')
+
+
+
+
+
                     ->where('questoes.banca_id', '=', $bancaId)
                         ->where('orgao_id', '=', $orgaoId)
+
                     ->groupBy('assuntos.id')
                         ->get();
                         return response()->json($resultadoPrograma);
                     }
+
+
 
 }

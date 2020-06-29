@@ -242,7 +242,7 @@ export default {
         QuestoesService.save(this.questao)
           .then(response => {
             this.questao = {};
-            alert("Salvo com sucesso");
+            alert("Registro salvo com sucesso");
             this.list();
             this.errors = [];
           })
@@ -253,7 +253,7 @@ export default {
         QuestoesService.update(this.questao)
           .then(response => {
             this.questao = {};
-            alert("atualizado com sucesso");
+            alert("Registro atualizado com sucesso");
             this.list();
             this.errors = [];
           })
