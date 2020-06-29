@@ -43,14 +43,14 @@
 
 ## Disposições:
 
- - Home
-  -  :pencil: Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
-  -  Órgãos: área para o cadastro, edição e exclusão de órgão;
-  -  Bancas: área para a gestão de bancas;
-  -  área para o gerenciamento de assuntos/disciplinas;
-  -   * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
+ - :tent: Home
+  -  :pencil:  Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
+  -  :office: Órgãos: área para o cadastro, edição e exclusão de órgão;
+  -  :post_office: Bancas: área para a gestão de bancas;
+  -  :blue_book: Assuntos área para o gerenciamento de assuntos/disciplinas;
+  -     * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
   -     * Assuntos que não possuem filhos são considerados pais na estrutura hierárquica;
-  -  Questões: área para o gerenciamento de questões;
+  -  :target:  Questões: área para o gerenciamento de questões;
   -      * entidades relacionadas: bancas, orgaos e assuntos;
 
 ## 🚀 Tecnologias
