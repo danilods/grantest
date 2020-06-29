@@ -39,8 +39,28 @@
 
 ## 💰 Sobre o projeto
 
-  O GoBarber Admin é um projeto desenvolvido a partir da participação no Bootcamp GoStack da #RocketSeat. Durante o curso, a metodologia de ensino é voltada diretamente para atividades práticas, de modo a refletir, ao máximo, o ambiente real encontrado no mercado de trabalho. A partir da ideia da aplicação GoBarber ensinada no BootCamp, houve a iniciativa particular de praticar os conceitos ministrados no curso; sendo assim, essa atividade resultou na criação de um ambiente administrativo, abstraindo a simulação da gestão da aplicação. 
+  GraNerD é uma aplicação desenvolvida para gerar um mapeamento de estudos direcionados a partir da escolha de determinada banca organizadora e o Órgão público. Além do mais, o módulo possui funcionalidades para gerenciar bancas, órgão, assunto, disciplinas e questões, de modo que o usuário possa manter sua uma base de dados com informações sobre certames públicos.
 
+Disposições:
+
+  Home
+    |
+    |
+    ## Programas: área para gerar programa de questões por assunto, mediante a escolha de uma banca e um órgão;
+    |
+    ## Órgãos: área para o cadastro, edição e exclusão de órgão;
+    |
+    |
+    ## Bancas: área para a gestão de bancas;
+    |
+    |
+    ## Assuntos: área para o gerenciamento de assuntos/disciplinas;
+        * Caso o campo de disciplina não seja preenchido, este assunto será raiz;
+        * Assuntos que não possuem filhos são considerados pais na estrutura hierárquica;
+    |
+    | 
+    ## Questões: área para o gerenciamento de questões;
+        * entidades relacionadas: bancas, orgaos e assuntos;
 
 ## 🚀 Tecnologias
 
