@@ -2,7 +2,7 @@
 <img src="overview.png" title="granerd"></h1>
 
 <h3 align="center">
-  :mortar-board: GranNERD - Programa dinâmico de estudos
+  :mortar_board: GranNERD - Programa dinâmico de estudos
 </h3>
 
 <p align="center">
