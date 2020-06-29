@@ -113,37 +113,17 @@ Obs.: Antes de continuar, verifique se a API está incializada.
 
 ```bash
 # Acesse o diretório da aplicação
-$ cd gobarber-admin
+$ cd vuegran
 
 # Instale as dependências
-$ yarn
+$ yarn or npm install
 
 # Rode a aplicação
-$ yarn start
+$ yarn dev ou npm dev
+
+# acesse em http://localhost:8080
 ```
 
-### Foi criada uma função para simular atraso na conexão para que fosse possível visualizar e testar o suspense. Você só precisa alterar a função setTimeOut, ou retirá-la, se preferir.
-
-```bash
-# src/routes/index.tsx
-
-const Dashboard = lazy(() => {
-  return new Promise(resolve => setTimeout(resolve, 5 * 1000)).then(
-    () =>
-      import('../pages/Dashboard')
-  );
-});
-```
-
-### Funcionalidades e componentes previstos para serem implementados:
-
-1. Skeleton - LoadContent;
-2. Pagination Component;
-3. Modal Component;
-4. Chart Component;
-5. Autenticação via GMAIL;
-6. Autenticação via Facebook;
-...
 
 ## 🤔 Como contribuir?
 
@@ -151,7 +131,7 @@ const Dashboard = lazy(() => {
 
 ```bash
 # Usando o github CLI:
-$ gh repo fork danilods/gobarber-admin
+$ gh repo fork danilods/grantest
 
 # Se você não tem GitHub CLI, use o website para isto.
 ```
@@ -160,7 +140,7 @@ $ gh repo fork danilods/gobarber-admin
 
 ```bash
 # Clone seu fork
-$ git clone your-fork-url && cd gobarber-admin
+$ git clone your-fork-url && cd grantest
 
 # Criar branch com sua feature
 $ git checkout -b my-feature
