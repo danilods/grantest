@@ -11,12 +11,12 @@ export default {
     return api.put('assuntos/'+assunto.id, assunto);
   },
   delete:(assunto) => {
-    return api.delete('assuntos', {data: assunto})
+    return api.delete('assuntos', {data: assunto});
   },
   search:(assunto) => {
-    return api.get('assuntos', {data: assunto})
+    return api.get('assuntos', {data: assunto});
   },
-  arvore:(assunto) => {
-    return api.get('programa', {data: assunto})
+  arvore:() => {
+    return api.get('assuntos');
   }
 }

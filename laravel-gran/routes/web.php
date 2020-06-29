@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::resource('orgaos', 'OrgaoController');
 Auth::routes();
 Route::get('/generate/models', '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start');
 Route::get('/home', 'HomeController@index')->name('home');

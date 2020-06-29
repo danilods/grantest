@@ -13,5 +13,11 @@ export default {
   },
   delete:(questoes) => {
     return api.delete('questoes', {data: questoes})
+  },
+  getProgram:(programa) => {
+    return api.get('questoes/'+programa.banca_id+'/'+programa.orgao_id);
+  },
+  paginate:(page) => {
+    return api.get('questoes/?page='+page);
   }
 }

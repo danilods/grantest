@@ -1,17 +1,18 @@
 <template>
   <div id="view">
     <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">QUESTÕES</a>
+      <div class="header-form">
+        <h2>PROGRAMA DE ESTUDOS</h2>
       </div>
     </nav>
 
     <div class="container">
+      <span>*Selecione o órgão, a banca e clique "Gerar programa" para visualizar o número de questões por assunto</span>
       <form @submit.prevent="save">
         <div class="question-select-group">
           <md-field>
             <label for="font">Órgão</label>
-            <md-select name="font" id="font">
+            <md-select name="font" id="font" v-model="programa.orgao_id">
               <md-option
                 v-for="orgao of orgaos"
                 :value="orgao.id"
@@ -23,8 +24,9 @@
 
           <md-field>
             <label for="font">Banca</label>
-            <md-select name="font" id="font">
+            <md-select name="font" id="font" v-model="programa.banca_id">
               <md-option
+
                 v-for="banca of bancas"
                 :value="banca.id"
                 :key="banca.id"
@@ -35,19 +37,38 @@
         </div>
 
         <button class="waves-effect waves-light btn-small">
-          Salvar<i class="material-icons right">save</i>
+          Gerar programa<i class="material-icons right">build</i>
         </button>
       </form>
-      <div class="site-map">
-        <ul id="root">
-          <li v-for="assunto of assuntos" :key="assunto.id">
-            {{ assunto.titulo_assunto }}*
-            <ul id="children" v-for="children of assunto.assuntos" :key="children.id">
-               <li>
-                  {{ children.titulo_assunto }}**</li>
-            </ul>
-          </li>
-        </ul>
+
+      <div class="">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                ASSUNTO
+              </th>
+              <th>N˚ de questões</th>
+              <th>OPÇÕES</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="program of dadosPrograma" :key="program.id">
+              <td>
+                {{ program.titulo_assunto }}
+              </td>
+              <td>
+                {{ program.num_questoes}}
+              </td>
+
+              <td>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>
@@ -68,6 +89,16 @@ export default {
         raiz_id: "",
         assuntos: [],
         assunto: {}
+      },
+      programa: {
+        banca_id:"",
+        orgao_id: ""
+      },
+      dadosPrograma: {
+        id: "",
+        titulo_assunto: "",
+        num_questoes: "",
+        root: ""
       },
       value: null,
       selectedAssunto: null,
@@ -96,6 +127,7 @@ export default {
 
   mounted() {
     this.list();
+    this.save(this.programa);
   },
   methods: {
     getAssuntos(searchTerm) {
@@ -115,7 +147,12 @@ export default {
         }, 500);
       });
     },
-
+     save() {
+        QuestoesService.getProgram(this.programa).then(response => {
+          console.log(response.data.original);
+          this.dadosPrograma = response.data.original;
+        })
+     },
     list() {
       AssuntoService.arvore()
         .then(response => {

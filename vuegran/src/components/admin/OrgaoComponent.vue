@@ -1,8 +1,8 @@
 <template>
   <div id="view">
     <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">ÓRGÃO</a>
+      <div class="header-form">
+        <h2>ÓRGÃOS</h2>
       </div>
     </nav>
 

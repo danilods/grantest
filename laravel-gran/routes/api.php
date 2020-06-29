@@ -33,6 +33,6 @@ Route::resource('itens_questoes', 'ItensQuestoesAPIController');
 
 Route::resource('programa', 'ProgramaEstudoAPIController');
 
-Route::resource('questoes/{idbanca}/{idOrgao}', 'QuestoesAPIController');
+Route::get('questoes/{idbanca}/{idOrgao}', 'QuestoesAPIController@index');
 
 

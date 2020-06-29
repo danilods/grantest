@@ -1,8 +1,8 @@
 <template>
   <div id="view">
     <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">ASSUNTOS</a>
+      <div class="header-form">
+        <h2>ASSUNTOS/DISCIPLINAS</h2>
       </div>
     </nav>
 
@@ -31,44 +31,17 @@
           Salvar<i class="material-icons right">save</i>
         </button>
       </form>
-      <div class="">
-        <table>
-          <thead>
-            <tr>
-              <th>
-                ASSUNTO
-              </th>
-              <th>DISCIPLINA</th>
-              <th>OPÇÕES</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr v-for="assunto of assuntos" :key="assunto.id">
-              <td>
-                {{ assunto.titulo_assunto }}
-              </td>
-              <td v-if="assunto.raiz_id !== null">
-                {{ assunto.titulo_assunto }}
-              </td>
-              <td v-else>
-                NÃO HÁ
-              </td>
-
-              <td>
-                <button
-                  @click="editar(assunto)"
-                  class="waves-effect btn-small blue darken-1"
-                >
-                  <i class="material-icons">create</i>
-                </button>
-                <button class="waves-effect btn-small red darken-1">
-                  <i class="material-icons">delete_sweep</i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="container-assuntos">
+        <ul id="root">
+          <li v-for="assunto of assuntos" :key="assunto.id">
+            <h4>{{ assunto.titulo_assunto }}</h4>
+            <ul id="children">
+              <li v-for="children of assunto.assuntos" :key="children.id">
+                <span>{{ children.titulo_assunto }}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -84,12 +57,11 @@ export default {
         id: "",
         titulo_assunto: "",
         raiz_id: "",
-        assuntos: [],
-        assunto: {}
+        assuntos: {}
       },
       value: null,
       selectedAssunto: null,
-      assuntos: [],
+      assuntos: {},
       assuntosSelect: [],
       assuntosList: [
         {
@@ -134,7 +106,7 @@ export default {
     list() {
       AssuntoService.list()
         .then(response => {
-          this.assuntos = response.data.data;
+          this.assuntos = response.data;
           console.log("ass", this.assuntos);
         })
         .catch(e => {
@@ -183,5 +155,30 @@ export default {
 .md-select-value {
   background: rgb(82, 177, 240);
   color: black;
+}
+
+#root li{
+  margin: 4px 16px 8px 54px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#root li h4{
+  border-bottom: 1px solid;
+  margin-bottom: 14px;
+
+}
+#children li{
+  color:rgb(34, 33, 33);
+  height: 42px;
+  border: 1px transparent;
+  border-radius: 10px;
+  background: #153e9736;
+
+}
+
+#children span{
+  margin-left: 14px;
+  padding-top: 24px;
 }
 </style>

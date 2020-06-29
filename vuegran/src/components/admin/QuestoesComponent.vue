@@ -1,8 +1,8 @@
 <template>
   <div id="view">
     <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">QUESTÕES</a>
+      <div class="header-form">
+        <h2>QUESTÕES</h2>
       </div>
     </nav>
 
@@ -179,6 +179,20 @@ export default {
         }, 500);
       });
     },
+    getResults(page) {
+      if (typeof page === "undefined") {
+        page = 1;
+      }
+
+      this.QuestoesService
+        .get("/categories?page=" + page)
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          this.questoes = data;
+        });
+    },
 
     list() {
       AssuntoService.list()
@@ -249,17 +263,13 @@ export default {
 <style>
 .table {
   margin: 20 0 0 20px;
-  background: rgba(241, 244, 245, 0.541)
+  background: rgba(241, 244, 245, 0.541);
 }
 .md-list {
-  background: #fff;
+  background: #00132a;
   z-index: 2;
-  color: black;
 }
-.md-select-value {
-  background: rgb(82, 177, 240);
-  color: black;
-}
+
 .question-select-group {
   display: flex;
   flex-direction: row;

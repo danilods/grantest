@@ -1,41 +1,48 @@
 <template>
   <div id="app">
     <nav id="header-menu">
-      <div class="logo"> <img src="./assets/logo.png"></div>
       <ul>
-                <li><router-link to="/programa"><span>Programas</span></router-link></li>
+        <li>
+          <router-link to="/programa"><span>Programas</span></router-link>
+        </li>
 
-        <li><router-link to="/orgaos"><span>Orgaos</span></router-link></li>
-        <li><router-link to="/bancas"><span>Bancas</span></router-link></li>
-        <li><router-link to="/assuntos"><span>Assuntos</span></router-link></li>
+        <li>
+          <router-link to="/orgaos"><span>Orgaos</span></router-link>
+        </li>
+        <li>
+          <router-link to="/bancas"><span>Bancas</span></router-link>
+        </li>
+        <li>
+          <router-link to="/assuntos"><span>Assuntos</span></router-link>
+        </li>
 
-        <li><router-link to="/questoes"><span>questões</span></router-link></li>
+        <li>
+          <router-link to="/questoes"><span>questões</span></router-link>
+        </li>
       </ul>
     </nav>
     <div id="content">
       <router-view></router-view>
-      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: "app",
-
+  name: "app"
 };
 </script>
 <style>
-
-
-#app {
+#app body {
   margin-top: -10px;
-  background: #e4e4e4;
+  background: #c0bfbf;
+  height: 100vh;
 }
+
 #header-menu {
-  background: #214685;
+  background-image: url("./assets/banner-web.png");
   margin: auto;
-  height: 260px;
+  height: 320px;
 }
 
 #header-menu .logo {
@@ -44,16 +51,10 @@ export default {
   width: 24px;
   float: left;
   font-size: 24px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-#header-menu .logo img{
-  margin-top: -8px;
-  height: 94px;
-  width: 180px;
-  float: left;
-}
-#header-menu ul{
+#header-menu ul {
   list-style: none;
   float: right;
   margin: 0;
@@ -70,23 +71,22 @@ export default {
   line-height: 28px;
   color: #fff;
   margin-top: 24px;
-  padding: 8px ;
+  padding: 8px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: .3s;
-
+  transition: 0.3s;
 }
 
-#header-menu ul li a span{
+#header-menu ul li a span {
   display: flex;
   justify-content: center;
   color: #fff;
 }
 
-#header-menu ul li a:focus{
+#header-menu ul li a:focus {
   outline: none;
 }
-#header-menu ul li a.active{
+#header-menu ul li a.active {
   background: rgba(255, 1, 44, 0.795);
   color: #fff;
   border-radius: 6px;
@@ -98,14 +98,26 @@ export default {
 
 .table {
   margin: 20px 0 20px 0;
-  background: rgba(241, 244, 245, 0.315)
+  background: rgba(241, 244, 245, 0.315);
+  color: #000;
 }
 #view {
   background: #fff;
   width: 920px;
-  margin: -76px auto;
-  box-shadow: #c5c5c5;
-  border-radius: 20% solid;
+  margin: 40px auto;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 3px 11px 19px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: -1px 3px 11px 19px rgba(0, 0, 0, 0.23);
+  box-shadow: -1px 3px 11px 19px rgba(0, 0, 0, 0.23);
+}
+
+#view nav {
+  margin-top: -98px;
+  margin-left: 0px;
+  margin-bottom: 14px;
+  border-radius: 20px;
+  height: 104px;
+  background: #006f98;
 }
 
 #view .title {
@@ -116,5 +128,12 @@ export default {
 
 #view .title span {
   font-size: 28px;
+}
+
+.header-form h2 {
+  padding-top: 24px;
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
 }
 </style>

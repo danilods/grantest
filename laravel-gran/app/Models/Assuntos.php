@@ -14,7 +14,7 @@ class Assuntos extends Model
     protected $fillable = ['titulo_assunto', 'raiz_id','deleted_at'];
 
     public static $rules = [
-        'titulo_assunto' => 'required|unique|max:255',
+        'titulo_assunto' => 'required|unique:assuntos|max:255',
     ];
 
     public function getDates()

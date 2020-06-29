@@ -14,7 +14,7 @@ class Bancas extends \Illuminate\Database\Eloquent\Model
     protected $fillable = ['nome_banca', 'deleted_at'];
 
     public static $rules = [
-        'nome_banca' => 'required|unique|max:255',
+        'nome_banca' => 'required|unique:bancas|max:255',
     ];
 
     public function getDates()

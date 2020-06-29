@@ -37,8 +37,7 @@ class AssuntosAPIController extends AppBaseController
     public function index()
     {
 
-        $assuntos = $this->objetoAssunto->with(['assuntos'])->paginate('10');
-
+        $assuntos = $this->objetoAssunto->with(['assuntos'])->where('raiz_id', '=',null)->get();
         return response()->json($assuntos);
     }
 

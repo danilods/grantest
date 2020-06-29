@@ -3,6 +3,11 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Models\Questoes;
+use App\Models\Bancas;
+use App\Models\Orgaos;
+use App\Models\Assuntos;
+
+
 use Faker\Generator as Faker;
 
 $factory->define(Questoes::class, function (Faker $faker) {
