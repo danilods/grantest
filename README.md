@@ -109,6 +109,9 @@ $ php artisan db:seed
 ou
 $ php artisan db:seed --class=NomeDoArquivoSeeder
 
+## para concluir, inicie o servidor
+$ php artisan serve
+
 ```
 
 ### Aplicação
