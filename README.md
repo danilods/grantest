@@ -126,7 +126,7 @@ $ cd vuegran
 $ yarn or npm install
 
 # Rode a aplicação
-$ yarn dev ou npm dev
+$ yarn dev ou npm run dev
 
 # acesse em http://localhost:8080
 ```
