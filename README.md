@@ -53,26 +53,12 @@
   -  :bulb:  Questões: área para o gerenciamento de questões;
   -      * entidades relacionadas: bancas, orgaos e assuntos;
 
-## 🚀 Tecnologias
+## 🚀 Tecnologias utilizadas
 
-- [Node.js](https://nodejs.org/)
-- [ReactJS](https://reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TypeORM](https://typeorm.io/#/)
-- [Express](https://expressjs.com/pt-br/)
-- [React Router DOM](https://reacttraining.com/react-router/)
-- [React Navigation](https://reactnavigation.org/)
-- [React Icons](https://react-icons.netlify.com/#/)
-- [Styled Components](https://styled-components.com/)
-- [Axios](https://github.com/axios/axios)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [EditorConfig](https://editorconfig.org/)
-- [Lazy Loading](https://pt.wikipedia.org/wiki/Lazy_loading)
-- [Code Splitting](https://pt-br.reactjs.org/docs/code-splitting.html)
-
-
+- [Vuejs](https://br.vuejs.org/)
+- [Laravel](https://laravel.com/)
+- [Mysql](https://www.mysql.com/)
+- [PHP](https://www.php.net/manual/pt_BR/intro-whatis.php)
 
 
 ## 💻 Iniciando
