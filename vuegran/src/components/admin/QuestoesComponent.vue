@@ -78,7 +78,9 @@
               <th>OPÇÕES</th>
             </tr>
           </thead>
-
+        <div class="loader" v-if="loading==true">
+          <img src="../../assets/ball-scale-multiple.gif" alt="loader">
+        </div>
           <tbody>
             <tr v-for="questao of questoes" :key="questao.id">
               <td>{{ questao.enunciado }}</td>
@@ -160,6 +162,7 @@ export default {
 
   mounted() {
     this.list();
+    this.listQuestions();
   },
   methods: {
     getAssuntos(searchTerm) {
@@ -193,6 +196,19 @@ export default {
           this.questoes = data;
         });
     },
+    listQuestions() {
+      this.loading=true;
+
+      QuestoesService.list()
+        .then(response => {
+
+          this.questoes = response.data.data;
+          console.log(this.questoes);
+        })
+        .catch(e => {
+          console.log(e);
+        }).finally(() => this.loading=false);
+    },
 
     list() {
       AssuntoService.list()
@@ -218,14 +234,7 @@ export default {
         .catch(e => {
           console.log(e);
         });
-      QuestoesService.list()
-        .then(response => {
-          this.questoes = response.data.data;
-          console.log(this.questoes);
-        })
-        .catch(e => {
-          console.log(e);
-        });
+
     },
 
     save() {
@@ -274,5 +283,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.loader img{
+  margin-left: 400px;
 }
 </style>

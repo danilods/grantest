@@ -36,7 +36,9 @@
               <th>OPÇÕES</th>
             </tr>
           </thead>
-
+          <div class="loader" v-if="loading == true">
+            <img src="../../assets/ball-scale-multiple.gif" alt="loader" />
+          </div>
           <tbody>
             <tr v-for="orgao of orgaos" :key="orgao.id">
               <td>{{ orgao.name }}</td>
@@ -83,13 +85,15 @@ export default {
   },
   methods: {
     list() {
+      this.loading=true;
+
       OrgaoService.list()
         .then(response => {
           this.orgaos = response.data.data;
         })
         .catch(e => {
           console.log(e);
-        });
+        }).finally(()=>this.loading=false);
     },
 
     save() {
@@ -124,4 +128,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.loader img{
+  margin-left: 400px;
+}
+</style>

@@ -52,7 +52,9 @@
               <th>OPÇÕES</th>
             </tr>
           </thead>
-
+        <div class="loader" v-if="loading==true">
+           <img src="../../assets/ball-scale-multiple.gif" alt="loader">
+        </div>
           <tbody>
             <tr v-for="program of dadosPrograma" :key="program.id">
               <td>
@@ -127,6 +129,7 @@ export default {
 
   mounted() {
     this.list();
+    this.listProgram();
     this.save(this.programa);
   },
   methods: {
@@ -153,8 +156,9 @@ export default {
           this.dadosPrograma = response.data.original;
         })
      },
-    list() {
-      AssuntoService.arvore()
+     listProgram(){
+       this.loading=true;
+       AssuntoService.arvore()
         .then(response => {
           this.assuntos = response.data;
 
@@ -162,7 +166,11 @@ export default {
         })
         .catch(e => {
           console.log(e);
-        });
+        }).finally(() => this.loading=false) ;
+     }
+     ,
+    list() {
+
 
       OrgaoService.list()
         .then(response => {
@@ -214,5 +222,9 @@ export default {
  #children {
   color:orangered;
   margin-left: 20px;
+}
+
+.loader img{
+  margin-left: 400px;
 }
 </style>

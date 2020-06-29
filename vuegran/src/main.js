@@ -9,6 +9,7 @@ import VueFormulate from '@braid/vue-formulate'
 import VueRouter from "vue-router";
 import routes from "./routes";
 
+
 Vue.use(VueFormulate)
 // Install BootstrapVue
 Vue.use(VueMaterial);

@@ -31,6 +31,9 @@
           Salvar<i class="material-icons right">save</i>
         </button>
       </form>
+      <div class="loader" v-if="loading == true">
+        <img src="../../assets/ball-scale-multiple.gif" alt="loader" />
+      </div>
       <div class="container-assuntos">
         <ul id="root">
           <li v-for="assunto of assuntos" :key="assunto.id">
@@ -104,6 +107,7 @@ export default {
     },
 
     list() {
+      this.loading=true;
       AssuntoService.list()
         .then(response => {
           this.assuntos = response.data;
@@ -111,7 +115,7 @@ export default {
         })
         .catch(e => {
           console.log(e);
-        });
+        }).finally(() => this.loading=false);
     },
 
     save() {
@@ -157,28 +161,29 @@ export default {
   color: black;
 }
 
-#root li{
+#root li {
   margin: 4px 16px 8px 54px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-#root li h4{
+#root li h4 {
   border-bottom: 1px solid;
   margin-bottom: 14px;
-
 }
-#children li{
-  color:rgb(34, 33, 33);
+#children li {
+  color: rgb(34, 33, 33);
   height: 42px;
   border: 1px transparent;
   border-radius: 10px;
   background: #153e9736;
-
 }
 
-#children span{
+#children span {
   margin-left: 14px;
   padding-top: 24px;
+}
+.loader img{
+  margin-left: 400px;
 }
 </style>
