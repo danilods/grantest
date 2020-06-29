@@ -68,72 +68,42 @@
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [Composer](https://getcomposer.org/)
 
 
-**Clone o projeto e acesse o diretório /gobarber-admin, conforme o comando abaixo **
-
-```bash
-$ git clone https://github.com/danilods/gobarber-admin.git && cd gobarber-admin
-```
-**Se você for utilizar autenticação com JWT, siga os passos abaixo. Caso opte por utilizar autenticação via Firebase, pule esta estapa e vá para o item "autenticação via Firebase"**
-
-**Siga os passos a seguir**
-
-### Backend para simulação de autenticação JWT
-
-**O foco do projeto é no backoffice da aplicação, de modo que sua estrutura visual possa ser evoluída. Portanto, o backend foi substituído por um simulador de autenticação com JWT e uma API simulada, utilizando json_server.**
-
-## **Abra uma nova janela do terminal e acesse o diretório gobarber-admin/fake-backend-api**
+**Clone o projeto e acesse o diretório /grantes, conforme o comando abaixo **
 
 ```bash
-# Starting from the project root folder, go to backend folder
-$ cd ../gobarber-admin/fake-backend-api
-
-# Inicie o json_server
-$ yarn start or npm start
-
-# Acompanhe a inicialização do servidor.
-
-# Você poderá acessar os dados para autenticação no arquivo users.json
-# O arquivo databse.json possibilita você controlar os dados a serem utilizados em um CRUD
-
-
+$ git clone https://github.com/danilods/grantest.git && cd grantest
 ```
 
-### Autenticação via Firebase 
-### Em caso de dúvidas quanto à criação de uma base de dados no Firebase, consulte ...
+```bash
+# Acesse o diretório para acessar o backend com a API Laravel
+$ cd /grantest/laravel-gran
 
+# baixe as dependencias do laravel e do PHP
+$ composer.phar install ou composer install
 
-**Abra o arquivo firebaseAPI.ts, situado no diretório src/services/firebaseAPI e preencha os campos de configuração com os dados fornecidos pelo firebase, ao criar sua base de dados.**
+# Acompanhe o download dos pacotes...
+
+# concluída instalação dos pacotes, acesse o arquivo .env e forneça os dados de conexão com o banco de dados (HOST/DATABASE_NAME/USER/PASSWORD)
+#
+
+```
+### Banco de dados 
+### Você precisará de uma instância do MySql rodando, seja em container ou em ambiente local;
 
 ```bash
-// Initialize Firebase
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
 
-  const app = firebase.initializeApp({
-  apiKey: "API_KEY",
-    authDomain: "XXXXXX.firebaseapp.com",
-    databaseURL: "https://xxxxxx.firebaseio.com",
-    projectId: "PROJECT_ID",
-    storageBucket: "xxxxxx.appspot.com",
-    messagingSenderId: "MESSAGE_ID",
+# Banco de dados iniciado, schema criado conforme informado no arquivo .env, siga para os seguintes passos:
 
-});
+## Rodando as migrations do projeto
+$ php artisan migrate
 
-export default app;
-
-### A seguir, vá no arquivo src/routes/Route.tsx e altere o hook de autenticação da seguinte forma:
-
-Substitua:
-
-const {user} = useAuth();
-
-por
-
-const {userFire} = useAuth();
-
-### Pronto! A partir de agora, a aplicação fará autenticação pelo Firebase.
+## Populando a base de dados com seeders (Localizados no diretório database/migrations e database/seeds)
+$ php artisan db:seed 
+ou
+$ php artisan db:seed --class=NomeDoArquivoSeeder
 
 ```
 
