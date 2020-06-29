@@ -2,7 +2,7 @@
 <img src="overview.png" title="granerd"></h1>
 
 <h3 align="center">
-  :barber: GranNERD - Programa dinâmico de estudos
+  :mortar-board: GranNERD - Programa dinâmico de estudos
 </h3>
 
 <p align="center">
@@ -35,7 +35,6 @@
 
 
 
-![Alt text](modelo-dados.png?raw=true "grantest")
 
 ## 💰 Sobre o projeto
 
@@ -91,6 +90,11 @@ $ composer.phar install ou composer install
 
 ```
 ### Banco de dados 
+
+## Modelo de dados
+![Alt text](modelo-dados.png?raw=true "grantest")
+
+
 ### Você precisará de uma instância do MySql rodando, seja em container ou em ambiente local;
 
 ```bash
