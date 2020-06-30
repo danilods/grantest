@@ -67,7 +67,7 @@
 - [Composer](https://getcomposer.org/)
 
 
-**Clone o projeto e acesse o diretório /grantes, conforme o comando abaixo **
+**Clone o projeto e acesse o diretório /grantest, conforme o comando abaixo **
 
 ```bash
 $ git clone https://github.com/danilods/grantest.git && cd grantest
