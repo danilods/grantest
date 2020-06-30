@@ -46,20 +46,13 @@ class QuestoesRepository extends BaseRepository
     }
 
     public function programaQuestoes($bancaId, $orgaoId){
-        $resultadoPrograma = DB::table('questoes')
-            ->join('assuntos', 'questoes.assunto_id', '=', 'assuntos.id')
-                ->select(DB::raw('count(*) as num_questoes, raiz_id as root')
-                , 'assuntos.titulo_assunto', 'assuntos.id')
-
-
-
-
-
-                    ->where('questoes.banca_id', '=', $bancaId)
-                        ->where('orgao_id', '=', $orgaoId)
-
-                    ->groupBy('assuntos.id')
-                        ->get();
+        $resultadoPrograma =  $resultadoPrograma = DB::table('questoes')
+        ->join('assuntos', 'assuntos.id', '=', 'questoes.assunto_id')
+        ->select(DB::raw('count(*) as num_questoes, assuntos.titulo_assunto, assuntos.id'))
+                ->where('questoes.banca_id', '=', $bancaId)
+                ->where('questoes.orgao_id', '=', $orgaoId)
+                ->groupBy('assuntos.id')
+                ->get();
                         return response()->json($resultadoPrograma);
                     }
 
