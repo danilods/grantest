@@ -106,6 +106,8 @@ $ php artisan db:seed
 ou
 $ php artisan db:seed --class=NomeDoArquivoSeeder
 
+## Aguarde alguns segundos até a carga total do banco, pois serão gerados aproximadamente 30 mil registros falsos para simulação.
+
 ## para concluir, inicie o servidor
 $ php artisan serve
 
