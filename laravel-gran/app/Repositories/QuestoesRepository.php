@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
  * Class QuestoesRepository
  * @package App\Repositories
  * @version June 25, 2020, 2:42 pm -03
-*/
+ */
 
 class QuestoesRepository extends BaseRepository
 {
@@ -45,17 +45,16 @@ class QuestoesRepository extends BaseRepository
         return Questoes::class;
     }
 
-    public function programaQuestoes($bancaId, $orgaoId){
+    public function programaQuestoes($bancaId, $orgaoId)
+    {
         $resultadoPrograma =  $resultadoPrograma = DB::table('questoes')
-        ->join('assuntos', 'assuntos.id', '=', 'questoes.assunto_id')
-        ->select(DB::raw('count(*) as num_questoes, assuntos.titulo_assunto, assuntos.id'))
-                ->where('questoes.banca_id', '=', $bancaId)
-                ->where('questoes.orgao_id', '=', $orgaoId)
-                ->groupBy('assuntos.id')
-                ->get();
-                        return response()->json($resultadoPrograma);
-                    }
+            ->join('assuntos', 'assuntos.id', '=', 'questoes.assunto_id')
+            ->select(DB::raw('count(*) as num_questoes, assuntos.titulo_assunto, assuntos.id'))
+            ->where('questoes.banca_id', '=', $bancaId)
+            ->where('questoes.orgao_id', '=', $orgaoId)
+            ->groupBy('assuntos.id')
+            ->get();
 
-
-
+        return response()->json($resultadoPrograma);
+    }
 }
