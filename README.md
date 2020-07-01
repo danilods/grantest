@@ -14,9 +14,6 @@
   
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/danilods/grantest?color=%235636D3">
   
-  <a href="https://github.com/danilods/gobarber-admin/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/danilods/grantest?color=%235636D3">
-  </a>
  
   
   <img alt="GitHub" src="https://img.shields.io/github/license/danilods/grantest?style=flat-squaret?color=%235636D3">
@@ -67,7 +64,7 @@
 - [Composer](https://getcomposer.org/)
 
 
-**Clone o projeto e acesse o diretório /grantes, conforme o comando abaixo **
+**Clone o projeto e acesse o diretório /grantest, conforme o comando abaixo **
 
 ```bash
 $ git clone https://github.com/danilods/grantest.git && cd grantest
@@ -105,6 +102,8 @@ $ php artisan migrate
 $ php artisan db:seed 
 ou
 $ php artisan db:seed --class=NomeDoArquivoSeeder
+
+## Aguarde alguns segundos até a carga total do banco, pois serão gerados aproximadamente 30 mil registros falsos para simulação.
 
 ## para concluir, inicie o servidor
 $ php artisan serve
