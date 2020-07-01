@@ -111,9 +111,9 @@ $ php artisan serve
 
 ```
 
-### Foram gerados cerca de 30 mil registros para a simulação da aplicação.
-## Você poderá aumentar a carga de mocks a partir da edição do arquivo QuestoesTableSeeder.php, localizada no diretório /database/seeds, 
-## por meio do laço de repetição responsável por gerar os dados.
+#### Foram gerados cerca de 30 mil registros para a simulação da aplicação.
+#### Você poderá aumentar a carga de mocks a partir da edição do arquivo QuestoesTableSeeder.php, localizada no diretório /database/seeds, 
+#### por meio do laço de repetição responsável por gerar os dados.
 
 
 ### Aplicação
