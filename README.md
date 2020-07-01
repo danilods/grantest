@@ -14,9 +14,6 @@
   
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/danilods/grantest?color=%235636D3">
   
-  <a href="https://github.com/danilods/gobarber-admin/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/danilods/grantest?color=%235636D3">
-  </a>
  
   
   <img alt="GitHub" src="https://img.shields.io/github/license/danilods/grantest?style=flat-squaret?color=%235636D3">
