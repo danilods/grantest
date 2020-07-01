@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="overview.png" title="granerd"></h1>
+<img src="tela-inicial.png" title="granerd"></h1>
 
 <h3 align="center">
   :mortar_board: GranNERD - Programa dinâmico de estudos
@@ -103,12 +103,18 @@ $ php artisan db:seed
 ou
 $ php artisan db:seed --class=NomeDoArquivoSeeder
 
-## Aguarde alguns segundos até a carga total do banco, pois serão gerados aproximadamente 30 mil registros falsos para simulação.
+## Aguarde alguns segundos até a carga total do banco, pois serão gerados 
+## aproximadamente 30 mil registros falsos para simulação.
 
 ## para concluir, inicie o servidor
 $ php artisan serve
 
 ```
+
+### Foram gerados cerca de 30 mil registros para a simulação da aplicação.
+## Você poderá aumentar a carga de mocks a partir da edição do arquivo QuestoesTableSeeder.php, localizada no diretório /database/seeds, 
+## por meio do laço de repetição responsável por gerar os dados.
+
 
 ### Aplicação
 
