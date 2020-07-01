@@ -36,7 +36,7 @@ class BancasAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $bancas = $this->objetoBanca->with(['questoes'])->paginate('10');
+        $bancas = $this->objetoBanca->paginate('10');
 
         return response()->json($bancas);
     }

@@ -55,6 +55,19 @@ class QuestoesRepository extends BaseRepository
             ->groupBy('assuntos.id')
             ->get();
 
-        return response()->json($resultadoPrograma);
+        $quantidade = DB::table('questoes')
+        ->join('assuntos', 'assuntos.id', '=', 'questoes.assunto_id')
+        ->select(DB::raw('count(*) as total'))
+        ->where('questoes.banca_id', '=', $bancaId)
+        ->where('questoes.orgao_id', '=', $orgaoId)
+        ->get();
+
+        $data = [
+           'original' => $resultadoPrograma,
+            'total' => $quantidade
+        ];
+
+        $merge_data = array_merge($data);
+        return response()->json($merge_data);
     }
 }

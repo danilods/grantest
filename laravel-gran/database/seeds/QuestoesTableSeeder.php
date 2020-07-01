@@ -54,7 +54,7 @@ class QuestoesTableSeeder extends Seeder
         $bancas = Bancas::pluck('id')->all();
         $orgaos = Orgaos::pluck('id')->all();
 
-        for ($i = 1; $i < 30000; $i++) {
+        for ($i = 1; $i < 60000; $i++) {
             DB::table('questoes')->insert([
                 'cod_questao' => $faker->randomDigit('QUEST'),
                 'enunciado' => $faker->randomElement($fakeQuestionCommand),

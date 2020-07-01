@@ -213,7 +213,7 @@ export default {
     list() {
       AssuntoService.list()
         .then(response => {
-          this.assuntos = response.data.data;
+          this.assuntos = response.data;
         })
         .catch(e => {
           console.log(e);
@@ -275,7 +275,7 @@ export default {
   background: rgba(241, 244, 245, 0.541);
 }
 .md-list {
-  background: #00132a;
+  background: #fff;
   z-index: 2;
 }
 

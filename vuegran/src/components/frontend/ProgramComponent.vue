@@ -7,7 +7,10 @@
     </nav>
 
     <div class="container">
-      <span>*Selecione o órgão, a banca e clique "Gerar programa" para visualizar o número de questões por assunto</span>
+      <span
+        >*Selecione o órgão, a banca e clique "Gerar programa" para visualizar o
+        número de questões por assunto</span
+      >
       <form @submit.prevent="save">
         <div class="question-select-group">
           <md-field>
@@ -26,7 +29,6 @@
             <label for="font">Banca</label>
             <md-select name="font" id="font" v-model="programa.banca_id">
               <md-option
-
                 v-for="banca of bancas"
                 :value="banca.id"
                 :key="banca.id"
@@ -40,6 +42,10 @@
           Gerar programa<i class="material-icons right">build</i>
         </button>
       </form>
+    <div class="total">
+        <span >{{totalQuestoes}} questões encontradas.</span>
+    </div>
+
 
       <div class="">
         <table>
@@ -52,25 +58,22 @@
               <th>OPÇÕES</th>
             </tr>
           </thead>
-        <div class="loader" v-if="loading==true">
-           <img src="../../assets/ball-scale-multiple.gif" alt="loader">
-        </div>
+          <div class="loader" v-if="loading == true">
+            <img src="../../assets/ball-scale-multiple.gif" alt="loader" />
+          </div>
           <tbody>
             <tr v-for="program of dadosPrograma" :key="program.id">
               <td>
                 {{ program.titulo_assunto }}
               </td>
               <td>
-                {{ program.num_questoes}}
+                {{ program.num_questoes }}
               </td>
 
-              <td>
-
-              </td>
+              <td></td>
             </tr>
           </tbody>
         </table>
-
       </div>
     </div>
   </div>
@@ -93,14 +96,15 @@ export default {
         assunto: {}
       },
       programa: {
-        banca_id:"",
+        banca_id: "",
         orgao_id: ""
       },
       dadosPrograma: {
         id: "",
         titulo_assunto: "",
         num_questoes: "",
-        root: ""
+        root: "",
+        total: ""
       },
       value: null,
       selectedAssunto: null,
@@ -114,12 +118,12 @@ export default {
         name: "",
         sigla_orgao: ""
       },
-      arvoreDeAssuntos:{},
+      arvoreDeAssuntos: {},
       selectedAssunto: null,
+      totalQuestoes: 0,
       assuntos: [],
       orgaos: [],
       bancas: [],
-      assuntosSelect: [],
 
       errors: [],
       loading: false,
@@ -129,8 +133,6 @@ export default {
 
   mounted() {
     this.list();
-    this.listProgram();
-    this.save(this.programa);
   },
   methods: {
     getAssuntos(searchTerm) {
@@ -150,15 +152,20 @@ export default {
         }, 500);
       });
     },
-     save() {
-        QuestoesService.getProgram(this.programa).then(response => {
-          console.log(response.data.original);
-          this.dadosPrograma = response.data.original;
-        })
-     },
-     listProgram(){
-       this.loading=true;
-       AssuntoService.arvore()
+    save() {
+      this.loading = true;
+      this.totalQuestoes = 0;
+      QuestoesService.getProgram(this.programa).then(response => {
+        console.log(response.data.original);
+        this.dadosPrograma = response.data.original.original;
+        this.totalQuestoes = response.data.original.total[0].total;
+        console.log(this.totalQuestoes);
+      }).catch(e => {
+        console.log(e);
+      }).finally(() => this.loading=false)  ;
+    },
+    listProgram() {
+      AssuntoService.arvore()
         .then(response => {
           this.assuntos = response.data;
 
@@ -166,12 +173,10 @@ export default {
         })
         .catch(e => {
           console.log(e);
-        }).finally(() => this.loading=false) ;
-     }
-     ,
+        });
+    },
     list() {
-
-
+      this.loading = true;
       OrgaoService.list()
         .then(response => {
           this.orgaos = response.data.data;
@@ -179,14 +184,14 @@ export default {
         .catch(e => {
           console.log(e);
         });
-
       Banca.list()
         .then(response => {
           this.bancas = response.data.data;
         })
         .catch(e => {
           console.log(e);
-        });
+        })
+        .finally(() => (this.loading = false));
     }
   }
 };
@@ -213,18 +218,34 @@ export default {
   text-decoration: none;
 }
 
- #root {
+#root {
   margin-top: 20px;
   color: #000;
   font-weight: bold;
 }
 
- #children {
-  color:orangered;
+#children {
+  color: orangered;
   margin-left: 20px;
 }
 
-.loader img{
+.loader img {
   margin-left: 400px;
+}
+.total {
+  display: flex;
+  align-items: center;
+  margin: 14px auto;
+  height: 28px;
+  width: 304px;
+  padding: 4px;
+  background: green;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.total span {
+  margin-left: 40px;
+  text-align: center;
 }
 </style>

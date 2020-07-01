@@ -36,7 +36,7 @@ class OrgaosAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $orgaos = $this->objetoOrgao->with(['questoes'])->paginate('10');
+        $orgaos = $this->objetoOrgao->paginate('10');
 
         return response()->json($orgaos);
     }
